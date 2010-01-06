@@ -97,7 +97,7 @@ class Converter(object):
                 self.png_src.emit('end_of_stream')
                 break
             data = self.get_data()
-            print ' --- Processing frame {0} ({1:.2f}%)'.format(frameno, (data['stream_position'] / data['stream_duration']) * 100)
+            print ' --- Processing frame {0} ({1:.2f}%)'.format(frameno, (float(data['stream_position']) / float(data['stream_duration'])) * 100)
             buf = self.filter_buffer(buf, **data)
             self.png_src.emit('push_buffer', buf)
             frameno += 1
