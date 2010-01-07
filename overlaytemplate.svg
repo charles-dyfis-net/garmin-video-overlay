@@ -9,14 +9,17 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:dyfis="http://dyfis.net/"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg2876"
    version="1.1"
-   inkscape:version="0.47pre4 r22446"
+   inkscape:version="0.47 r22583"
    width="854"
    height="480"
-   sodipodi:docname="overlaytemplate.svg">
+   sodipodi:docname="overlaytemplate.svg"
+   sodipodi:version="0.32"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <metadata
      id="metadata2882">
     <rdf:RDF>
@@ -26,6 +29,12 @@
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
         <dc:title />
+      </cc:Work>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -48,34 +57,36 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1067"
+     inkscape:window-width="1261"
+     inkscape:window-height="932"
      id="namedview2878"
      showgrid="false"
      inkscape:zoom="1"
-     inkscape:cx="286.86228"
+     inkscape:cx="452.1692"
      inkscape:cy="240"
-     inkscape:window-x="0"
-     inkscape:window-y="25"
-     inkscape:window-maximized="1"
+     inkscape:window-x="205"
+     inkscape:window-y="119"
+     inkscape:window-maximized="0"
      inkscape:current-layer="svg2876" />
   <image
-     sodipodi:absref="/home/cduffy/Desktop/Screenshot.png"
-     py:attrs="{'{http://www.w3.org/1999/xlink}href': ('file://'+input_frame_filename)}"
+     sodipodi:absref="C:\Documents and Settings\Duff\Desktop\test.png"
+     xlink:href="test.png"
+     dyfis:remove="{http://www.w3.org/1999/xlink}href"
      sodipodi:insensitive="true"
-     inkscape:label="#frame"
-     y="0"
-     x="0"
-     id="image2886"
+     width="854"
      height="480"
-     width="854" />
+     id="image2886"
+     x="0"
+     y="0"
+     inkscape:label="#frame"
+     py:attrs="{'{http://www.w3.org/1999/xlink}href': ('file://'+input_frame_filename)}" />
   <g
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="Foreground" />
   <rect
      py:if="data_available"
-     style="fill:#0000ff;fill-opacity:0.41304345;fill-rule:evenodd;stroke:#0000ff;stroke-width:1.22535205px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="fill:#0000ff;fill-opacity:0.41304345;fill-rule:evenodd;stroke:#0000ff;stroke-width:1.22535205px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal;font-size:18px;text-anchor:middle;text-align:center;writing-mode:lr;line-height:100%"
      id="rect2889"
      width="185.77464"
      height="124.77465"
@@ -90,7 +101,9 @@
      id="text3663"
      sodipodi:linespacing="100%"><tspan
        sodipodi:role="line"
-       id="tspan2834">Speed</tspan></text>
+       id="tspan2834"
+       x="654"
+       y="370">Speed</tspan></text>
   <text
      py:if="data_available"
      sodipodi:linespacing="100%"
@@ -100,7 +113,9 @@
      style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;text-align:start;line-height:100%;writing-mode:lr;text-anchor:start;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L Bold Condensed"
      xml:space="preserve"><tspan
        sodipodi:role="line"
-       id="tspan2830">Distance</tspan></text>
+       id="tspan2830"
+       x="654"
+       y="395.96667">Distance</tspan></text>
   <text
      py:if="data_available"
      xml:space="preserve"
@@ -123,20 +138,22 @@
      xml:space="preserve"><tspan
        sodipodi:role="line"
        id="tspan3715"
-       py:content="speed">24</tspan></text>
+       py:content="'{0:.2f}'.format(speed)"
+       x="820"
+       y="370">24</tspan></text>
   <text
      py:if="data_available"
      xml:space="preserve"
-     style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;text-align:end;line-height:100%;writing-mode:lr;text-anchor:end;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L Bold Condensed"
-     x="819.34564"
-     y="444"
+     style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial"
+     x="738.05615"
+     y="444.03339"
      id="text3697"
      sodipodi:linespacing="100%"><tspan
        sodipodi:role="line"
        id="tspan3701"
-       x="819.34564"
-       y="444"
-       py:content="str(time)">2010-01-03T01:15:25</tspan></text>
+       x="738.05615"
+       y="444.03339"
+       py:content="time.strftime('%Y-%m-%d %H:%M:%S')">2010-01-03 01:15:25</tspan></text>
   <text
      py:if="data_available"
      xml:space="preserve"
@@ -147,7 +164,9 @@
      sodipodi:linespacing="100%"><tspan
        sodipodi:role="line"
        id="tspan3711"
-       py:content="dist">85</tspan></text>
+       py:content="'{0:.2f}'.format(dist)"
+       x="819.28564"
+       y="395.96667">85</tspan></text>
   <text
      py:if="data_available"
      sodipodi:linespacing="100%"
@@ -158,5 +177,7 @@
      xml:space="preserve"><tspan
        sodipodi:role="line"
        id="tspan3713"
-       py:content="elevation">1250</tspan></text>
+       py:content="int(elevation)"
+       x="819.92316"
+       y="419.98334">1250</tspan></text>
 </svg>
