@@ -211,7 +211,7 @@ class GPXConverter(SVGConverter):
         self.gpx_data_iter = self.get_trackpoint_iterator()
         self.prev_point = self.gpx_data_iter.next()
         self.next_point = self.gpx_data_iter.next()
-        self.calc_curr_dist()
+        self.update_span_stats()
         self.prior_dist = 0.0 # distance previously traveled
         self.climb = 0.0
         self.descent = 0.0
@@ -228,12 +228,19 @@ class GPXConverter(SVGConverter):
                     'time': time_obj
                 }
                 yield data
-    def calc_curr_dist(self):
+    def update_span_stats(self):
+        """ Update statistics related to the current and next points; does not alter totals.  """
         self.elevation_delta = self.next_point['ele'] - self.prev_point['ele']
         self.curr_dist = geolocator.gislib.getDistance(
             (self.prev_point['lon'], self.prev_point['lat']),
             (self.next_point['lon'], self.next_point['lat']),
         ) * (geolocator.gislib.kmsPerNauticalMile * 1000)
+        self.curr_span = self.next_point['time'] - self.prev_point['time']
+        self.curr_span_seconds = timedelta_to_seconds(self.curr_span)
+        self.curr_speed = self.curr_dist / self.curr_span_seconds
+        # determine prev, next point times as seconds from start of video
+        self.prev_point_seconds = timedelta_to_seconds(self.prev_point['time'] - self.start_time)
+        self.next_point_seconds = timedelta_to_seconds(self.next_point['time'] - self.start_time)
     def get_data_for_time(self, video_time_ns):
         """
         Input:  time in nanoseconds since start of video playback
@@ -256,13 +263,7 @@ class GPXConverter(SVGConverter):
                 self.finished = True
                 return { 'data_available': False, }
             self.prior_dist += self.curr_dist
-            self.calc_curr_dist()
-            self.curr_span = self.next_point['time'] - self.prev_point['time']
-            self.curr_span_seconds = timedelta_to_seconds(self.curr_span)
-            self.curr_speed = self.curr_dist / self.curr_span_seconds
-            # determine prev, next point times as seconds from start of video
-            self.prev_point_seconds = timedelta_to_seconds(self.prev_point['time'] - self.start_time)
-            self.next_point_seconds = timedelta_to_seconds(self.next_point['time'] - self.start_time)
+            self.update_span_stats()
         # determine frame-local data
         percent_span_completion = (
             (timedelta_to_seconds(video_time_delta) - self.prev_point_seconds)
