@@ -146,10 +146,16 @@ class Converter(object):
 class SVGConverter(Converter):
     def __init__(self, video_in, video_out, svg_template_text):
         Converter.__init__(self, video_in, video_out)
-        self.svg_template = genshi.template.MarkupTemplate(svg_template_text)
+        self.svg_template = genshi.template.MarkupTemplate(self.preprocess_template(svg_template_text))
         self.tempfile_svg = tempfile.NamedTemporaryFile(suffix='.svg')
         self.tempfile_png_in = tempfile.NamedTemporaryFile(suffix='.in.png')
         self.tempfile_png_out = tempfile.NamedTemporaryFile(suffix='.out.png')
+    def preprocess_template(self, svg_template_text):
+        root = lxml.etree.XML(svg_template_text)
+        for el in root.xpath('//*[@dyfis:remove]', namespaces={'dyfis':'http://dyfis.net/'}):
+            for attrib_name in el.attrib['{http://dyfis.net/}remove'].split(','):
+                del el.attrib[attrib_name]
+        return lxml.etree.tostring(root)
     def get_data_for_time(self, video_time_ns):
         return {}
     def filter_buffer(self, buffer_in, **kwargs):
