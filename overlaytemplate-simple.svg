@@ -140,7 +140,7 @@
        id="tspan3715"
        py:content="'{0:.2f}'.format(speed)"
        x="820"
-       y="370">24</tspan></text>
+       y="370">24.13</tspan></text>
   <text
      py:if="data_available"
      xml:space="preserve"
@@ -166,7 +166,7 @@
        id="tspan3711"
        py:content="'{0:.2f}'.format(dist)"
        x="819.28564"
-       y="395.96667">85</tspan></text>
+       y="395.96667">85.13</tspan></text>
   <text
      py:if="data_available"
      sodipodi:linespacing="100%"

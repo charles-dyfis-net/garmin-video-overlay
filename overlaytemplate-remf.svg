@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dyfis="http://dyfis.net/"
+   xmlns:py="http://genshi.edgewall.org/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2876"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   width="854"
+   height="480"
+   sodipodi:docname="overlaytemplate-remf.svg"
+   sodipodi:version="0.32"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata2882">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2880">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       id="perspective2884" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1181"
+     id="namedview2878"
+     showgrid="false"
+     inkscape:zoom="1"
+     inkscape:cx="443.89655"
+     inkscape:cy="32"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-global="true"
+     inkscape:snap-grids="false"
+     inkscape:snap-bbox="true"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2957"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,854"
+       id="guide3003" />
+    <sodipodi:guide
+       position="854,0"
+       orientation="-480,0"
+       id="guide3005" />
+    <sodipodi:guide
+       position="854,480"
+       orientation="0,-854"
+       id="guide3007" />
+    <sodipodi:guide
+       position="0,480"
+       orientation="480,0"
+       id="guide3009" />
+  </sodipodi:namedview>
+  <image
+     sodipodi:absref="C:\Documents and Settings\Duff\Desktop\test.png"
+     xlink:href="test.png"
+     dyfis:remove="{http://www.w3.org/1999/xlink}href"
+     sodipodi:insensitive="true"
+     width="854"
+     height="480"
+     id="image2886"
+     x="0"
+     y="0"
+     inkscape:label="#frame"
+     py:attrs="{'{http://www.w3.org/1999/xlink}href': ('file://'+input_frame_filename)}" />
+  <text
+     xml:space="preserve"
+     style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial"
+     x="754.46289"
+     y="21.5"
+     id="text3697"
+     sodipodi:linespacing="100%"><tspan
+       sodipodi:role="line"
+       id="tspan3701"
+       x="754.46289"
+       y="21.5"
+       py:content="time.strftime('%Y-%m-%d %H:%M:%S')">2010-01-03 01:15:25</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="32.526913"
+     y="470.80762"
+     id="text3162"><tspan
+       sodipodi:role="line"
+       id="tspan3164" /></text>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Foreground">
+    <rect
+       py:if="data_available"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0000ff;fill-opacity:0.41304345;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.72495389px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       id="rect2908"
+       width="206.18675"
+       height="39.350574"
+       x="13.538826"
+       y="435.28696"
+       inkscape:tile-x0="52.813232"
+       inkscape:tile-y0="220.64938" />
+    <text
+       py:if="data_available"
+       xml:space="preserve"
+       style="font-size:19.99998856px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       x="17.816158"
+       y="462.96555"
+       id="text3663"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2834"
+         x="17.816158"
+         y="462.96555"
+         style="font-size:19.99998856px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial Bold">Speed (kph)</tspan></text>
+    <text
+       py:if="data_available"
+       sodipodi:linespacing="100%"
+       id="text3689"
+       y="462.96555"
+       x="214.25768"
+       style="font-size:19.99998856px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       xml:space="preserve"><tspan
+         sodipodi:role="line"
+         id="tspan3715"
+         py:content="'{0:.2f}'.format(speed)"
+         x="214.25768"
+         y="462.96555"
+         style="font-size:19.99998856px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;font-family:Arial;-inkscape-font-specification:Arial Bold">24.13</tspan></text>
+    <rect
+       inkscape:tile-y0="220.64938"
+       inkscape:tile-x0="52.813232"
+       y="435.28696"
+       x="634.27393"
+       height="39.350574"
+       width="206.18675"
+       id="use3133"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0000ff;fill-opacity:0.41304345;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.72495389px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       py:if="data_available" />
+    <text
+       py:if="data_available"
+       xml:space="preserve"
+       style="font-size:19.99998856px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       x="638.32635"
+       y="462.96555"
+       id="text3234"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan3236"
+         x="638.32635"
+         y="462.96555"
+         style="font-size:19.99998856px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial Bold">Climb (feet/s)</tspan></text>
+    <rect
+       inkscape:tile-y0="220.64938"
+       inkscape:tile-x0="52.813232"
+       y="435.28696"
+       x="220.45052"
+       height="39.350574"
+       width="206.18675"
+       id="use3125"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0000ff;fill-opacity:0.41304345;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.72495389px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       py:if="data_available" />
+    <text
+       sodipodi:linespacing="100%"
+       id="text3210"
+       y="462.96555"
+       x="224.49338"
+       style="font-size:19.99998856px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       xml:space="preserve"
+       py:if="data_available"><tspan
+         y="462.96555"
+         x="224.49338"
+         id="tspan3212"
+         sodipodi:role="line"
+         style="font-size:19.99998856px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial Bold">Grade</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:19.99998856px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       x="421.22791"
+       y="462.96555"
+       id="text3214"
+       sodipodi:linespacing="100%"
+       py:if="data_available"><tspan
+         y="462.96555"
+         x="421.22791"
+         py:content="'{0:.0%}'.format(grade) if grade is not None else '--'"
+         id="tspan3216"
+         sodipodi:role="line"
+         style="font-size:19.99998856px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;font-family:Arial;-inkscape-font-specification:Arial Bold">-1%</tspan></text>
+    <rect
+       inkscape:tile-y0="220.64938"
+       inkscape:tile-x0="52.813232"
+       y="435.28696"
+       x="427.36224"
+       height="39.350574"
+       width="206.18675"
+       id="use3129"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0000ff;fill-opacity:0.41304345;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.72495389px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       py:if="data_available" />
+    <text
+       sodipodi:linespacing="100%"
+       id="text3218"
+       y="462.96555"
+       x="430.90695"
+       style="font-size:19.99998856px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       xml:space="preserve"
+       py:if="data_available"><tspan
+         y="462.96555"
+         x="430.90695"
+         id="tspan3220"
+         sodipodi:role="line"
+         style="font-size:19.99998856px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial Bold">Elevation (m)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:19.99998856px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       x="628.20782"
+       y="462.96555"
+       id="text3222"
+       sodipodi:linespacing="100%"
+       py:if="data_available"><tspan
+         y="462.96555"
+         x="628.20782"
+         py:content="int(elevation) if elevation is not None else '--'"
+         id="tspan3224"
+         sodipodi:role="line"
+         style="font-size:19.99998856px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;font-family:Arial;-inkscape-font-specification:Arial Bold">600</tspan></text>
+    <text
+       py:if="data_available"
+       sodipodi:linespacing="100%"
+       id="text3238"
+       y="462.96555"
+       x="835.06079"
+       style="font-size:19.99998856px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       xml:space="preserve"><tspan
+         sodipodi:role="line"
+         id="tspan3240"
+         py:content="int((elevation_delta / curr_span_seconds) * 3.2808399)"
+         x="835.06079"
+         y="462.96555"
+         style="font-size:19.99998856px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;font-family:Arial;-inkscape-font-specification:Arial Bold">-9</tspan></text>
+    <rect
+       inkscape:tile-y0="220.64938"
+       inkscape:tile-x0="52.813232"
+       y="395.21094"
+       x="13.539148"
+       height="39.350574"
+       width="206.18678"
+       id="use3123"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0000ff;fill-opacity:0.41304345;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.72495395px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       py:if="data_available" />
+    <text
+       xml:space="preserve"
+       style="font-size:19.99999046px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       x="17.093832"
+       y="422.88959"
+       id="use3190"
+       sodipodi:linespacing="100%"
+       py:if="data_available"><tspan
+         y="422.88959"
+         x="17.093832"
+         id="tspan3208"
+         sodipodi:role="line"
+         style="font-size:19.99999046px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial Bold">Distance (km)</tspan></text>
+    <text
+       sodipodi:linespacing="100%"
+       id="use3192"
+       y="422.88959"
+       x="214.25797"
+       style="font-size:19.99999046px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       xml:space="preserve"
+       py:if="data_available"><tspan
+         y="422.88959"
+         x="214.25797"
+         py:content="'{0:.2f}'.format(dist / 1000.0)"
+         id="tspan3204"
+         sodipodi:role="line"
+         style="font-size:19.99999046px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;font-family:Arial;-inkscape-font-specification:Arial Bold">85.13</tspan></text>
+    <rect
+       inkscape:tile-y0="220.64938"
+       inkscape:tile-x0="52.813232"
+       y="395.21094"
+       x="634.27441"
+       height="39.350574"
+       width="206.18678"
+       id="use3135"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0000ff;fill-opacity:0.41304345;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.72495395px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       py:if="data_available" />
+    <text
+       sodipodi:linespacing="100%"
+       id="text3226"
+       y="422.88959"
+       x="637.81891"
+       style="font-size:19.99999046px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       xml:space="preserve"
+       py:if="data_available"><tspan
+         y="422.88959"
+         x="637.81891"
+         id="tspan3228"
+         sodipodi:role="line"
+         style="font-size:19.99999046px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial Bold">Power</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:19.99999046px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       x="834.13354"
+       y="422.88959"
+       id="text3230"
+       sodipodi:linespacing="100%"
+       py:if="data_available"><tspan
+         y="422.88959"
+         x="834.13354"
+         py:content="'{0} W'.format(watts) if watts is not None else '--'"
+         id="tspan3232"
+         sodipodi:role="line"
+         style="font-size:19.99999046px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;font-family:Arial;-inkscape-font-specification:Arial Bold">650 W</tspan></text>
+    <rect
+       inkscape:tile-y0="220.64938"
+       inkscape:tile-x0="52.813232"
+       y="395.21094"
+       x="220.45085"
+       height="39.350574"
+       width="206.18678"
+       id="use3127"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0000ff;fill-opacity:0.41304345;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.72495395px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       py:if="data_available" />
+    <text
+       sodipodi:linespacing="100%"
+       id="text2874"
+       y="422.88959"
+       x="224.50345"
+       style="font-size:19.99999046px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       xml:space="preserve"
+       py:if="data_available"><tspan
+         y="422.88959"
+         x="224.50345"
+         sodipodi:role="line"
+         id="tspan2878"
+         style="font-size:19.99999046px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial Bold">Cadence</tspan></text>
+    <text
+       sodipodi:linespacing="100%"
+       id="text2904"
+       y="422.88959"
+       x="421.29654"
+       style="font-size:19.99999046px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       xml:space="preserve"
+       py:if="data_available"><tspan
+         py:content="int(cadence) if cadence is not None else '--'"
+         y="422.88959"
+         x="421.29654"
+         id="tspan2906"
+         sodipodi:role="line">90</tspan></text>
+    <rect
+       inkscape:tile-y0="220.64938"
+       inkscape:tile-x0="52.813232"
+       y="395.21094"
+       x="427.36261"
+       height="39.350574"
+       width="206.18678"
+       id="use3131"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0000ff;fill-opacity:0.41304345;fill-rule:evenodd;stroke:#0000ff;stroke-width:0.72495395px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       py:if="data_available" />
+    <text
+       py:if="data_available"
+       xml:space="preserve"
+       style="font-size:19.99999046px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       x="431.93265"
+       y="422.88959"
+       id="text3677"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan3681"
+         x="431.93265"
+         y="422.88959"
+         style="font-size:19.99999046px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Arial;-inkscape-font-specification:Arial Bold">Time</tspan></text>
+    <text
+       py:if="data_available"
+       sodipodi:linespacing="100%"
+       id="text3707"
+       y="422.88959"
+       x="627.82733"
+       style="font-size:19.99999046px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       xml:space="preserve"><tspan
+         sodipodi:role="line"
+         id="tspan3713"
+         py:content="str(time - data_start_time).split('.')[0]"
+         x="627.82733"
+         y="422.88959"
+         style="font-size:19.99999046px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;font-family:Arial;-inkscape-font-specification:Arial Bold">0:10:05</tspan></text>
+  </g>
+</svg>
