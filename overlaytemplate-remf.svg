@@ -166,7 +166,7 @@
        xml:space="preserve"><tspan
          sodipodi:role="line"
          id="tspan3715"
-         py:content="'{0:.2f}'.format(speed)"
+         py:content="'{0:.2f}'.format(speed * 3.6)"
          x="214.25768"
          y="462.96555"
          style="font-size:19.99998856px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;font-family:Arial;-inkscape-font-specification:Arial Bold">24.13</tspan></text>
