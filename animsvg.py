@@ -30,7 +30,7 @@ class Converter(object):
         self.player = gst.parse_launch(
             'filesrc name=video_in' +
             ' ! decodebin name=decoder' +
-            ' oggmux name=mux' +
+            ' matroskamux name=mux' +
             ' ! filesink name=video_out' +
             ' queue name=q_audio_in' +
             ' ! audioconvert' +
