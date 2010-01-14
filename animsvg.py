@@ -240,7 +240,7 @@ class XMLConverter(SVGConverter):
         if self.curr_dist == 0:
             self.curr_grade = 0
         else:
-            self.curr_grade = self.elevation_delta / ((abs((self.curr_dist ** 2) - (self.elevation_delta ** 2)) ** 0.5) * (-1 if self.elevation_delta < 0 else 1))
+            self.curr_grade = self.elevation_delta / ((abs((self.curr_dist ** 2) - (self.elevation_delta ** 2)) ** 0.5))
     def update_totals(self):
         if self.elevation_delta > 0:
             self.climb += self.elevation_delta
