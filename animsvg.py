@@ -362,7 +362,7 @@ class GPXConverter(XMLConverter):
 def main():
     gobject.threads_init()
     loop = gobject.MainLoop()
-    c = TCXConverter(sys.argv[1], sys.argv[2], open(sys.argv[3]).read(), sys.argv[4], sys.argv[5])
+    c = TCXConverter(sys.argv[1], sys.argv[2], open(sys.argv[3], 'r').read(), sys.argv[4], sys.argv[5])
     thread.start_new_thread(c.run, (loop,))
     loop.run()
 
