@@ -306,18 +306,25 @@ class XMLConverter(SVGConverter):
 TCX_NS='http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2'
 TCX='{%s}' % TCX_NS
 
+TPX_NS='http://www.garmin.com/xmlschemas/ActivityExtension/v2'
+TPX='{%s}' % TPX_NS
+
+nsmap={'tcx':TCX_NS, 'tpx':TPX_NS}
+
 class TCXConverter(XMLConverter):
     def get_trackpoint_iterator(self):
-        for trkseg in lxml.etree.ETXPath('//{TCX}Track'.format(TCX=TCX))(self.xml_data):
+        for trkseg in self.xml_data.xpath('//tcx:Track', namespaces=nsmap):
             for trkpt in trkseg.getchildren():
                 time_str = trkpt.find('{TCX}Time'.format(TCX=TCX)).text.rstrip('Z')
                 time_obj = datetime.strptime(time_str, TIME_FMT_STR)
                 cadence_el = trkpt.find('{TCX}Cadence'.format(TCX=TCX))
+                watts_list = trkpt.xpath('./tcx:Extensions/tpx:TPX/tpx:Watts/text()', namespaces=nsmap)
                 data = {
                     'ele': float(trkpt.find('{TCX}AltitudeMeters'.format(TCX=TCX)).text),
                     'distance': float(trkpt.find('{TCX}DistanceMeters'.format(TCX=TCX)).text),
                     'cadence': float(cadence_el.text) if cadence_el is not None else None,
                     'time': time_obj,
+                    'watts': float(watts_list[0]) if len(watts_list) else None,
                 }
                 yield data
     def update_curr_dist(self):
@@ -330,6 +337,7 @@ class TCXConverter(XMLConverter):
         retval = XMLConverter.get_data_for_time(self, video_time_ns)
         retval.update({
             'cadence': self.prev_point['cadence'],
+            'watts': self.prev_point['watts'],
             'input_format': 'tcx',
         })
         return retval
