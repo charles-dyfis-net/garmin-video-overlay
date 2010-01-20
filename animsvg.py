@@ -3,6 +3,7 @@
 ## NOTES
 # Elevation gain or loss is not included in distance calculations
 
+import os
 import subprocess
 import sys
 import tempfile
@@ -160,6 +161,7 @@ class SVGConverter(Converter):
         return {}
     def filter_buffer(self, buffer_in, **kwargs):
         # TODO: lock?
+        kwargs['environ'] = dict(os.environ)
         kwargs['input_frame_filename'] = self.tempfile_png_in.name
         kwargs.update(self.get_data_for_time(kwargs['video_stream_position']))
 
