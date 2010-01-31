@@ -26,7 +26,7 @@ PASSTHRU_FIELDS=set([
     'pixel-aspect-ratio',
 ])
 
-class Converter(object):
+class Renderer(object):
     def __init__(self, infile, outfile):
         self.player = gst.parse_launch(
             'filesrc name=video_in' +
@@ -144,9 +144,10 @@ class Converter(object):
         else:
             print 'Unrecognized message: %r' % (message,)
 
-class SVGConverter(Converter):
-    def __init__(self, video_in, video_out, svg_template_text):
-        Converter.__init__(self, video_in, video_out)
+class SVGRenderer(Renderer):
+    def __init__(self, reader, video_in, video_out, svg_template_text):
+        Renderer.__init__(self, video_in, video_out)
+        self.reader = reader
         self.svg_template = genshi.template.MarkupTemplate(self.preprocess_template(svg_template_text))
         self.tempfile_svg = tempfile.NamedTemporaryFile(suffix='.svg')
         self.tempfile_png_in = tempfile.NamedTemporaryFile(suffix='.in.png')
@@ -157,13 +158,11 @@ class SVGConverter(Converter):
             for attrib_name in el.attrib['{http://dyfis.net/}remove'].split(','):
                 del el.attrib[attrib_name]
         return lxml.etree.tostring(root)
-    def get_data_for_time(self, video_time_ns):
-        return {}
     def filter_buffer(self, buffer_in, **kwargs):
         # TODO: lock?
         kwargs['environ'] = dict(os.environ)
         kwargs['input_frame_filename'] = self.tempfile_png_in.name
-        kwargs.update(self.get_data_for_time(kwargs['video_stream_position']))
+        kwargs.update(self.reader.get_data_for_time(kwargs['video_stream_position']))
 
         self.tempfile_png_in.seek(0)
         self.tempfile_png_in.truncate()
@@ -200,10 +199,13 @@ def timedelta_to_seconds(td):
         td.microseconds * 0.000001
     )
 
-class XMLConverter(SVGConverter):
+class Reader(object):
+    def get_data_for_time(self, video_time_ns):
+        return {}
+
+class XMLReader(Reader):
     """A base class providing common tools for XML-based trackpoint storage formats"""
-    def __init__(self, video_in, video_out, svg_template_text, xml_file_name, video_start_time):
-        SVGConverter.__init__(self, video_in, video_out, svg_template_text)
+    def __init__(self, xml_file_name, video_start_time):
         if isinstance(video_start_time, basestring):
             video_start_time = datetime.strptime(video_start_time, TIME_FMT_STR)
         self.start_time = video_start_time
@@ -313,7 +315,7 @@ TPX='{%s}' % TPX_NS
 
 nsmap={'tcx':TCX_NS, 'tpx':TPX_NS}
 
-class TCXConverter(XMLConverter):
+class TCXReader(XMLReader):
     def get_trackpoint_iterator(self):
         for trkseg in self.xml_data.xpath('//tcx:Track', namespaces=nsmap):
             for trkpt in trkseg.getchildren():
@@ -336,7 +338,7 @@ class TCXConverter(XMLConverter):
         Input:  time in nanoseconds since start of video playback
         Output: elevation, distance traveled, current speed
         """
-        retval = XMLConverter.get_data_for_time(self, video_time_ns)
+        retval = XMLReader.get_data_for_time(self, video_time_ns)
         retval.update({
             'cadence': self.prev_point['cadence'],
             'watts': self.prev_point['watts'],
@@ -347,7 +349,7 @@ class TCXConverter(XMLConverter):
 GPX_NS='http://www.topografix.com/GPX/1/1'
 GPX='{%s}' % GPX_NS
 
-class GPXConverter(XMLConverter):
+class GPXReader(XMLReader):
     def get_trackpoint_iterator(self):
         for trkseg in lxml.etree.ETXPath('//{GPX}trkseg'.format(GPX=GPX))(self.xml_data):
             for trkpt in trkseg.getchildren():
@@ -364,7 +366,12 @@ class GPXConverter(XMLConverter):
 def main():
     gobject.threads_init()
     loop = gobject.MainLoop()
-    c = TCXConverter(sys.argv[1], sys.argv[2], open(sys.argv[3], 'r').read(), sys.argv[4], sys.argv[5])
+    c = SVGRenderer(
+        TCXReader(sys.argv[4], sys.argv[5]),
+        sys.argv[1],
+        sys.argv[2],
+        open(sys.argv[3], 'r').read()
+    )
     thread.start_new_thread(c.run, (loop,))
     loop.run()
 
