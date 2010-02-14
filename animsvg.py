@@ -370,13 +370,18 @@ class GPXReader(XMLReader):
                 yield data
 
 def main():
+    import optparse
+    op = optparse.OptionParser(usage='%prog video_in video_out svg_template tcx_file video_start_time')
+    options, args = op.parse_args()
+    if len(args) != 5:
+        op.error('wrong number of command-line arguments')
     gobject.threads_init()
     loop = gobject.MainLoop()
     c = SVGRenderer(
-        TCXReader(sys.argv[4], sys.argv[5]),
-        sys.argv[1],
-        sys.argv[2],
-        open(sys.argv[3], 'r').read()
+        TCXReader(args[3], args[4]),
+        args[0],
+        args[1],
+        open(args[2], 'r').read()
     )
     thread.start_new_thread(c.run, (loop,))
     loop.run()
