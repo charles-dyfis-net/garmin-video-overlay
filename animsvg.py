@@ -236,7 +236,7 @@ class XMLReader(Reader):
         self.elevation_delta = self.next_point['ele'] - self.prev_point['ele']
         self.curr_span = self.next_point['time'] - self.prev_point['time']
         self.curr_span_seconds = timedelta_to_seconds(self.curr_span)
-        self.curr_speed = self.curr_dist / self.curr_span_seconds
+        self.curr_speed = self.curr_dist / self.curr_span_seconds if self.curr_span_seconds else 0.0
         # determine prev, next point times as seconds from start of video
         self.prev_point_seconds = timedelta_to_seconds(self.prev_point['time'] - self.start_time)
         self.next_point_seconds = timedelta_to_seconds(self.next_point['time'] - self.start_time)
