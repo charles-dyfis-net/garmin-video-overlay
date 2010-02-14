@@ -200,7 +200,11 @@ def timedelta_to_seconds(td):
     )
 
 class Reader(object):
+    def __iter__(self):
+        """Iterate over dicts for known data points"""
+        raise NotImplementedException
     def get_data_for_time(self, video_time_ns):
+        """Provide data for a given time, potentially interpolating to do so"""
         return {}
 
 class XMLReader(Reader):
@@ -217,6 +221,8 @@ class XMLReader(Reader):
         self.update_span_stats()
         self.init_total_stats()
         self.finished = False # if data stream ended
+    def __iter__(self):
+        return self.get_trackpoint_iterator()
     def get_trackpoint_iterator(self):
         raise NotImplementedError
     def init_total_stats(self):
